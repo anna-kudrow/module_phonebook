@@ -8,4 +8,12 @@ main_menu = ['Главное меню',
              'Удалить контакт', 
              'Выход']
 input_choice = 'Выберите пункт меню: '
-input_menu_error = f'Введенное число должно быть от 1 до {len(main_menu)}'
+input_menu_error = f'Введенное число должно быть от 0 до {len(main_menu) - 1}'
+
+file_load_successful = 'Телефонная книга успешно загружена!'
+empty_phone_book = 'Телефонная книга пуста или не загружена'
+
+
+
+
+end_program = 'До свидания!'
