@@ -28,3 +28,12 @@ def show_book(book: dict, msg: str) -> bool:
     else:
         print_message(msg)    
  
+
+def new_contact() -> list[str]:
+    new = []
+    for item in text.new_contact:
+        new.append(input(item))
+    return new    
+        
+def input_request(msg: str) -> str:
+    return input(msg)

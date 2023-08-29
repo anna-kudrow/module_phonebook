@@ -11,9 +11,18 @@ input_choice = 'Выберите пункт меню: '
 input_menu_error = f'Введенное число должно быть от 0 до {len(main_menu) - 1}'
 
 file_load_successful = 'Телефонная книга успешно загружена!'
+file_save_successful = 'Телефонная книга успешно сохранена!'
 empty_phone_book = 'Телефонная книга пуста или не загружена'
 
+new_contact = ['Введите имя: ', 'Введите номер телефона: ', 'Введите комментарий: ']
 
+for_search = 'Введите ключевое слово для поиска: '
 
 
 end_program = 'До свидания!'
+
+def contact_save_successful(name: str):
+    return f'Контакт {name} успешно сохранён!'
+
+def not_search(word: str) -> str:
+    return 'Контакты содержащие "{word}" не найдены :('
