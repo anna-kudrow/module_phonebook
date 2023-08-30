@@ -19,19 +19,20 @@ def print_message(msg: str):
     print('=' * len(msg) + '\n')      
 
 
-def show_book(book: dict, msg: str) -> bool:
+def show_book(book: dict, msg: str):
     if book:
-        print('\n' + '=' * 67)
+        max_len = [len(max(item, key=len)) for item in zip(*book.values())]
+        print('\n' + '=' * (sum(max_len) + 8))
         for i, contact in book.items():
-            print(f'{i:>3}. {contact[0]:<20} {contact[1]:<20} {contact[2]:<20}')     
-        print('=' * 67 + '\n')  
+            print(f'{i:>3}. {contact[0]:<{max_len[0]}} {contact[1]:<{max_len[1]}} {contact[2]:<{max_len[2]}}')     
+        print('=' * (sum(max_len) + 8) + '\n')  
     else:
         print_message(msg)    
  
 
-def new_contact() -> list[str]:
+def input_contact(msg: list[str]) -> list[str]:
     new = []
-    for item in text.new_contact:
+    for item in msg:
         new.append(input(item))
     return new    
         
